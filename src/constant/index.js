@@ -1,9 +1,12 @@
 
 import { GiReturnArrow, GiDeliveryDrone, GiPayMoney } from "react-icons/gi";
 
+import beautyProduct from '../assets/beauty-product.png';
+import electric from '../assets/electric.png';
+
 const slideImages = {
-    'image-1': 'src/assets/beauty-product.png',
-    'image-2': 'src/assets/electric.png',
+    'image-1': beautyProduct,
+    'image-2': electric,
 }
 
 const icons = {

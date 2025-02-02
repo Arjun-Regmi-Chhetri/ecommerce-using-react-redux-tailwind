@@ -1,0 +1,50 @@
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+.navbar{
+  height: 125px;
+}
+
+.footer{
+  height: 65px;
+}
+
+
+.wrapper{
+  min-height: calc(100vh - 190px);
+}
+/* For Chrome, Safari, Edge */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
+.list-icon, .grid-icon {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .list-icon, .grid-icon {
+    font-size: 28px;
+  }
+}
+
+
+
+
+
+

@@ -11,8 +11,22 @@ const Sort = () => {
   const { sortProduct, gridView } = useSelector((state) => state.filter)
   const dispatch = useDispatch()
 
+
+
  
-  
+  useEffect(() => {
+      const handleResize = () =>{
+        if(window.innerWidth < 640){
+          dispatch(setGridView())
+        }
+      }
+
+      window.addEventListener('resize', handleResize)
+
+      return () => {
+        window.removeEventListener('resize', handleResize)
+      }
+  }, [dispatch])
 
 
   return (
@@ -21,12 +35,12 @@ const Sort = () => {
         <p className='text-gray-400 '>View: </p>
         <button onClick={() => dispatch(setGridView())} className='mx-2'>
           {
-            gridView === true ? <DashboardIcon className='text-black grid-icon'/> : <DashboardIcon className='text-gray-400' />
+            gridView ? <DashboardIcon className='text-black grid-icon'/> : <DashboardIcon className='text-gray-400' />
           }
         </button>
         <button onClick={() => dispatch(setListView())}  className='hidden sm:block' >
           {
-            gridView === false ? <ViewListIcon className='text-black list-icon'  /> : <ViewListIcon className='text-gray-400' />
+            !gridView ? <ViewListIcon className='text-black list-icon'  /> : <ViewListIcon className='text-gray-400' />
           }
         </button>
 

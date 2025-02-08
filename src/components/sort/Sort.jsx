@@ -24,7 +24,7 @@ const Sort = () => {
             gridView === true ? <DashboardIcon className='text-black grid-icon'/> : <DashboardIcon className='text-gray-400' />
           }
         </button>
-        <button onClick={() => dispatch(setListView())} >
+        <button onClick={() => dispatch(setListView())}  className='hidden sm:block' >
           {
             gridView === false ? <ViewListIcon className='text-black list-icon'  /> : <ViewListIcon className='text-gray-400' />
           }
